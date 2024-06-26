@@ -3,13 +3,17 @@ import { useState } from "react"
 export default function likeButton(){
     let [isLiked, setIsliked]=useState(false);
     let toggleLike= () =>{
-        console.log("We are going to toggle");
+       setIsliked(!isLiked);
     };
+    let LikeStyle={color:"red"}
 
     return(
         <div>
-            <p onClick={toggleLike}>
-            <i className="fa-regular fa-heart"></i>
+            <p onClick={toggleLike}>{
+
+                isLiked ? <i className="fa-solid fa-heart" style={LikeStyle} ></i>:    <i className="fa-regular fa-heart"></i>
+                }
+        
             </p>
 
 
