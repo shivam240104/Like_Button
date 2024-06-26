@@ -1,11 +1,14 @@
+import { useState } from "react"
+
 export default function likeButton(){
-    let clicked = () =>{
-              console.log("cliked");  
-    }
+    let [isLiked, setIsliked]=useState(false);
+    let toggleLike= () =>{
+        console.log("We are going to toggle");
+    };
 
     return(
         <div>
-            <p onClick={clicked}>
+            <p onClick={toggleLike}>
             <i className="fa-regular fa-heart"></i>
             </p>
 
